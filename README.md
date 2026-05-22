@@ -137,10 +137,10 @@ jupyter nbconvert --to notebook --execute notebooks/02_model_training.ipynb
 If you use this package, please cite:
 
 ```bibtex
-@article{elatfa2026brca,
-  title={Machine Learning-Based Gene Filtering for RNA-Seq Data: A Comparative Study in Breast Cancer},
+@article{ELATFA,
+  title={An Interpretable Machine-Learning Surrogate for HTSFilter: Label-Free RNA-Seq Gene Filtering with Cross-Cancer Validation},
   author={El Atfa, Soufiane},
-  journal={Briefings in Bioinformatics},
+  journal={MDPI BioMedInformatics},
   year={2026},
   doi={[DOI]}
 }
