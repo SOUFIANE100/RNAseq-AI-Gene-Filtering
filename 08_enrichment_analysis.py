@@ -12,22 +12,8 @@ Thresholds
 ORA  : padj < 0.05
 GSEA : padj < 0.05, |NES| >= 1.0
 
-Inputs
-------
-- results/de_HTSFilter_full.csv
-- results/de_RF_full.csv
 
-Outputs
--------
-- results/ORA_HTSFilter_up.csv, ORA_HTSFilter_down.csv
-- results/ORA_RF_up.csv, ORA_RF_down.csv
-- results/GSEA_HTSFilter_Hallmark.csv, GSEA_HTSFilter_KEGG.csv
-- results/GSEA_RF_Hallmark.csv, GSEA_RF_KEGG.csv
-- results/GSEA_pathway_comparison_NES.csv
-- figures/ORA_dotplot.png
-- figures/GSEA_Hallmark_comparison.png
-- figures/GSEA_KEGG_bubble.png
-- figures/GSEA_heatmap.png
+
 """
 
 import pandas as pd
