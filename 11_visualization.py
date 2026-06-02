@@ -4,37 +4,6 @@
 Generate all publication-quality (Nature-style) figures for the manuscript.
 Requires all upstream analysis results to be present in results/.
 
-Figures generated
------------------
-Fig 1 : Pipeline overview (schematic)
-Fig 2 : Model performance comparison (ROC curves + bar chart)
-Fig 3 : SHAP feature importance (beeswarm + bar)
-Fig 4 : DEG volcano plots (HTSFilter vs RF)
-Fig 5 : ORA dot plots (up/down pathways)
-Fig 6 : GSEA Hallmark comparison
-Fig 7 : Co-expression network hub genes
-Fig 8 : Statistical validation overview (6-panel)
-
-Inputs
-------
-- results/model_performance_5fold_CV.csv
-- results/shap_feature_importance.csv
-- results/de_HTSFilter_full.csv, de_RF_full.csv
-- results/ORA_HTSFilter_up.csv, ORA_HTSFilter_down.csv
-- results/GSEA_HTSFilter_Hallmark.csv, GSEA_RF_Hallmark.csv
-- results/network_nodes_HTSFilter.csv, network_edges_HTSFilter.csv
-- results/statistical_validation_RF_vs_HTSFilter.csv
-
-Outputs
--------
-- figures/fig1_pipeline.png
-- figures/fig2_model_performance.png
-- figures/fig3_shap.png
-- figures/fig4_volcano.png
-- figures/fig5_ORA.png
-- figures/fig6_GSEA.png
-- figures/fig7_network.png
-- figures/fig8_validation.png
 """
 
 import pandas as pd
