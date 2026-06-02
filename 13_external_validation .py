@@ -3,41 +3,8 @@
 11_external_validation_REAL.py
 ===============================
 Validation externe zero-shot du surrogate LightGBM entraîné sur TCGA-BRCA,
-appliqué sans ré-entraînement à TCGA-LUAD et TCGA-COAD (recount2 / tcga_matrix.h5).
+appliqué sans ré-entraînement à TCGA-LUAD et TCGA-COAD.
 
-Ce script est le CODE RÉELLEMENT EXÉCUTÉ qui a produit les résultats de l'article
-(§3.11, Tableau de validation externe, Figure 10).
-
-Résultats reproduits (article v16)
-------------------------------------
-  BRCA (test set) : AUC=0.99700, F1=0.9941, Jaccard=0.9884, Acc=0.9887
-  LUAD (transfer) : AUC=0.99634, F1=0.9922, Jaccard=0.9844, Acc=0.9850
-                    HTSFilter=23993, LightGBM=23973, Discordant=376
-  COAD (transfer) : AUC=0.99537, F1=0.9907, Jaccard=0.9816, Acc=0.9821
-                    HTSFilter=24408, LightGBM=24081, Discordant=451
-
-18 Features (article order — matching feature_matrix_all.csv)
---------------------------------------------------------------
-  mean_expr, var_expr, std_expr, median_expr, cv_expr,
-  sparsity, q25, q75, iqr_expr, min_expr, max_expr, range_expr,
-  skewness, kurtosis, mean_nonzero, log_mean, log_var, pct_above_mean
-
-Données requises
------------------
-  tcga_matrix.h5   — matrice TCGA recount2 (11284 samples × 25150 gènes)
-                     Clés HDF5 : data/expression, meta/cancertype,
-                     meta/gdc_cases.samples.sample_type, meta/genes
-
-Usage
-------
-  python 11_external_validation_REAL.py --h5 tcga_matrix.h5 --outdir results/
-
-Dépendances
------------
-  numpy, pandas, scipy, scikit-learn, lightgbm, matplotlib, seaborn, h5py
-
-Auteur : SOUFIAANE EL ATFA
-Article : Cancers (MDPI), v16
 """
 
 import argparse
@@ -79,8 +46,6 @@ COLORS = {
     "BRCA":     "#000000",
     "LUAD":     "#0279EE",
     "COAD":     "#75A025",
-    "GSE254558":"#FF9400",
-    "GSE62944": "#FD9BED",
 }
 
 # ── Cancer types (recount2 / TCGA labels) ────────────────────────────────────
