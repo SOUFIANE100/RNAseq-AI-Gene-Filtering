@@ -12,15 +12,7 @@ Tests performed
 5. Bland-Altman analysis (mean expression agreement)
 6. Lin's Concordance Correlation Coefficient (CCC)
 
-Inputs
-------
-- data/gene_features_16.csv
-- data/counts_QC.csv
 
-Outputs
--------
-- results/statistical_validation_RF_vs_HTSFilter.csv
-- figures/statistical_validation_overview.png
 """
 
 import pandas as pd
