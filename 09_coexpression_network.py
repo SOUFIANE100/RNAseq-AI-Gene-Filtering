@@ -11,20 +11,7 @@ Parameters
 - Pearson |r| > 0.70 edge threshold
 - Louvain community detection (resolution=1.0)
 
-Inputs
-------
-- data/counts_QC.csv
-- data/gene_features_16.csv
 
-Outputs
--------
-- results/network_edges_HTSFilter.csv
-- results/network_edges_RF.csv
-- results/network_nodes_HTSFilter.csv
-- results/network_nodes_RF.csv
-- results/network_statistics_comparison.csv
-- figures/hub_gene_network.png
-- figures/network_metrics_comparison.png
 """
 
 import pandas as pd
